@@ -54,10 +54,18 @@ this.setState({
 });
 }
 
+AddBookmark(bookmark) {
+  this.setState({
+    bookmarks: [...this.state.bookmarks, bookmark],
+    showAddForm: false
+  })
+}
+
 render() {
   const page = this.state.showAddForm
-        ? <AddBookmark ShowForm = {show => this.setShowAddForm(show)}/>
-        : <BookmarkApp bookmarks={this.state.bookmarks} ShowForm={show => this.setShowAddForm(show)}/>; 
+        ? <AddBookmark showForm = {show => this.setShowAddForm(show)}
+        handleAdd={bookmark => this.AddBookmark(bookmark)}/>
+        : <BookmarkApp bookmarks={this.state.bookmarks} showForm={show => this.setShowAddForm(show)}/>; 
 
   return (
     <div className="App">

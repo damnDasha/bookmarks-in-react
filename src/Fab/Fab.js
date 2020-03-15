@@ -2,13 +2,13 @@ import React, {Component} from 'react';
 import './Fab.css';
 
 class Fab extends Component {
-    render() {
-      return (
-        <div className="fab" onClick={e => this.props.showForm(true)}>
-          &#43;
-        </div>
-      );
+    render (){
+        return(
+            <div className='fab' onClick = {e => this.props.showForm(true)} >
+                &#43;
+            </div>
+        )
     }
-  }
-  
-  export default Fab;
+}
+
+export default Fab;
