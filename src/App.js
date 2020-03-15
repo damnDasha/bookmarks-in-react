@@ -7,6 +7,7 @@ import BookmarkApp from './BookmarkApp/BookmarkApp';
 class App extends Component {
 
 
+  
 constructor(props) {
   super(props);
   this.state = {
@@ -20,7 +21,7 @@ componentDidMount() {
   const options = {
     method: 'GET',
     headers: {
-      "Authorization": "Bearer $2a$10$ZhdeJefcb.5sx/DCmO/n8u5sJLcARAdbHw9tfm1mevGRq3s1.5DpW",
+      "Authorization": "Bearer $2a$10$pZjWnhmcZ3yejpqyyimrDeZJhQznHMPYANlXD.40DDDx69/VV88t2",
       "Content-Type": "application/json"
     }
   };
@@ -47,10 +48,16 @@ componentDidMount() {
 
 }
 
+setShowAddForm(show) {
+this.setState({
+  showAddForm: show
+});
+}
+
 render() {
   const page = this.state.showAddForm
-        ? <AddBookmark />
-        : <BookmarkApp bookmarks={this.state.bookmarks}/>; 
+        ? <AddBookmark ShowForm = {show => this.setShowAddForm(show)}/>
+        : <BookmarkApp bookmarks={this.state.bookmarks} ShowForm={show => this.setShowAddForm(show)}/>; 
 
   return (
     <div className="App">
@@ -58,6 +65,11 @@ render() {
     </div>
   );
 }
+
 }
+
+
+
+
 
 export default App;
