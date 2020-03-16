@@ -2,4 +2,44 @@
   text-align: center;
   position: relative;
   height: 100%;
+  font-family: 'Raleway' 'open sans';
+}
+h2 {
+  font-family: 'raleway';
+  font-weight: 800;
+  font-size: 68px;
+  margin-bottom: 0.5em;
+}
+
+body{
+  font-family: 'open sans', sans-serif;
+  background-color: ivory;
+  
+}
+
+form {
+  border-style: dotted;
+  align-items: center;
+  padding-left: 100px;
+  padding-top: 50px;
+}
+
+input{
+  height: 0.3in;
+  width: 2in;
+  font-size: 16px;
+}
+
+label {
+  font-size: 24px;
+}
+
+button {
+align-items: center;
+display: block;
+width: 1in;
+height: 0.5in;
+margin: 10px;
+font-size: 20px;
+background-color: greenyellow;
 }
