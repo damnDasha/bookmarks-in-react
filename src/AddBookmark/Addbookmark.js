@@ -73,10 +73,16 @@ handleSubmit(e){
 }
 
   render() {
+    const error = this.state.error
+    ?<div className="error">{this.state.error}</div>
+    : '';
     return (
       <div className="addbookmark">
         <h2>Add Bookmark</h2>
-        <form className="addbookmark__form">
+        { error }
+        <form className="addbookmark__form"
+        onSubmit={e => this.handleSubmit(e)}>
+        
           <label htmlFor="title">Title:</label>
           <input type="text" name="title" id="title" placeholder="Title" value={this.state.title} onChange={e =>this.titleChanged(e.target.value)}/>
           <label htmlFor="url">Url:</label>

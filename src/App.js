@@ -17,7 +17,7 @@ constructor(props) {
 }
 
 componentDidMount() {
-  const url = 'http://localhost:8081/v3/bookmarks';
+  const url = 'https://tf-ed-bookmarks-api.herokuapp.com/v3/bookmarks';
   const options = {
     method: 'GET',
     headers: {
@@ -29,7 +29,7 @@ componentDidMount() {
   fetch(url, options)
     .then(res => {
       if(!res.ok) {
-        throw new Error('Something went wrong, please try again later.');
+        throw new Error('we haz an error!');
       }
       return res;
     })
