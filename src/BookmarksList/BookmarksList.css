@@ -1,0 +1,36 @@
+
+
+/* div.bookmark {
+    border-left: 2px solid #bdb9b9;
+  border-right: 2px solid #bdb9b9;
+  border-bottom: 2px solid #bdb9b9;
+  padding-bottom: 1em;
+  padding-top: 0.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+  border-radius: 5px;
+  align-items: center;
+    border: 5px solid#664F29;
+    border-style: dashed;
+
+
+
+  margin-top: 8px;
+  margin-bottom: 8px;
+
+} */
+
+div.bookmark {
+    padding-top: 1em;
+    margin-top: 2em;
+    width: 400px;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 5px;
+    align-items: center;
+      border: 5px solid#664F29;
+      border-style: dashed;
+  
+    
+    
+  }

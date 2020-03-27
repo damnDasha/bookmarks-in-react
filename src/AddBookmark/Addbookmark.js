@@ -51,7 +51,7 @@ handleSubmit(e){
   fetch(url, options)
   .then(res=> {
   if(!res.ok){
-    throw new Error ('We haz failure!!')
+    throw new Error ('We haz failure!! Please complete all fields')
   }
   return res.json();
   
@@ -74,12 +74,13 @@ handleSubmit(e){
 
   render() {
     const error = this.state.error
-    ?<div className="error">{this.state.error}</div>
+    ?<div className="error">&times;{this.state.error}</div>
     : '';
     return (
       <div className="addbookmark">
+         { error }
         <h2>Add Bookmark</h2>
-        { error }
+       
         <form className="addbookmark__form"
         onSubmit={e => this.handleSubmit(e)}>
         
@@ -99,8 +100,8 @@ handleSubmit(e){
             value={this.state.rating} onChange={e=>this.ratingChanged(e.target.value)}/>
 
           <div className="addbookmark__buttons">
-            <button onClick={e => this.props.showForm(false)}>Cancel</button>
-            <button type="submit" >Save</button>
+            <button id='cancel' onClick={e => this.props.showForm(false)}>Cancel</button>
+            <button id="submit" >Save</button>
           </div>  
         </form>
       </div>

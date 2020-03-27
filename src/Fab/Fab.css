@@ -1,5 +1,5 @@
 .fab {
-    border-radius: 50%;
+    /* border-radius: 50%;
     width: 30px;
     height: 30px;
     position: absolute;
@@ -12,9 +12,36 @@
     align-items: center;
     cursor: pointer;
     border: solid 1px #0049B2;
-  }
+  } */
+  margin-top: 5px;
+  padding: 10px;
+  text-align: right;
+  background-color: transparent;
+  border: 3px dashed#664F29;
+  box-sizing: border-box;
+  color: #555;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  height: 38px;
+  letter-spacing: 0.05rem;
+  line-height: 34px;
+  padding: 0 26px;
+  text-align: center;
+  text-transform: uppercase;
+  display: block;
+margin-left: auto;
+margin-right: auto;
+margin-top: 2em;
+margin-bottom: 2em;}
   
   .fab:hover {
-    box-shadow: 1px 1px 1px 1px #0049B2;
-    border: solid 1px #0049CC;
+    box-shadow: 1px 1px 1px 1px #1b0e11;
+    /*border: dashed 1px #1b0e11; */
+
+    color: white;
+  text-emphasis-color: #664f29;
+  border-color: #1b0e11;
+  outline: 0;
   }

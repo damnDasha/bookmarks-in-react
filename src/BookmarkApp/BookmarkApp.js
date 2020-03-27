@@ -7,7 +7,7 @@ class BookmarkApp extends Component {
     render (){
         return (
             <div className='bookmarkApp'>
-                <h2>Bookmarks</h2>
+                <h1>Bookmarks</h1>
                 <BookmarksList bookmarks ={this.props.bookmarks} />
                 <Fab showForm={this.props.showForm} />
             </div>
